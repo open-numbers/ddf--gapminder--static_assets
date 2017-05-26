@@ -43,7 +43,8 @@
                 ],
                 "primaryKey": [
                     "geo",
-                    "time"
+                    "time",
+                    "income_distribution"
                 ]
             }
         },
