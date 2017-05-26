@@ -1,0 +1,4 @@
+concept,concept_type
+geo,entity_domain
+time,time
+income_distribution,string
