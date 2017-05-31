@@ -21,14 +21,17 @@
                     },
                     {
                         "name": "concept_type"
+                    },
+                    {
+                        "name": "domain"
                     }
                 ],
                 "primaryKey": "concept"
             }
         },
         {
-            "path": "ddf--datapoints--income_distribution--by--geo--time.csv",
-            "name": "ddf--datapoints--income_distribution--by--geo--time",
+            "path": "ddf--datapoints--income_mountain--by--geo--time.csv",
+            "name": "ddf--datapoints--income_mountain--by--geo--time",
             "schema": {
                 "fields": [
                     {
@@ -38,23 +41,28 @@
                         "name": "time"
                     },
                     {
-                        "name": "income_distribution"
+                        "name": "income_mountain"
                     }
                 ],
                 "primaryKey": [
                     "geo",
-                    "time",
-                    "income_distribution"
+                    "time"
                 ]
             }
         },
         {
-            "path": "ddf--entities--geo.csv",
-            "name": "ddf--entities--geo",
+            "path": "ddf--entities--geo--global.csv",
+            "name": "ddf--entities--geo--global",
             "schema": {
                 "fields": [
                     {
                         "name": "geo"
+                    },
+                    {
+                        "name": "is--global"
+                    },
+                    {
+                        "name": "topojson"
                     }
                 ],
                 "primaryKey": "geo"
@@ -62,14 +70,81 @@
         }
     ],
     "ddfSchema": {
-        "datapoints": [],
-        "entities": [],
+        "datapoints": [
+            {
+                "primaryKey": [
+                    "geo",
+                    "time"
+                ],
+                "value": "income_mountain",
+                "resources": [
+                    "ddf--datapoints--income_mountain--by--geo--time"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global",
+                    "time"
+                ],
+                "value": "income_mountain",
+                "resources": [
+                    "ddf--datapoints--income_mountain--by--geo--time"
+                ]
+            }
+        ],
+        "entities": [
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "is--global",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global"
+                ],
+                "value": "is--global",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "geo"
+                ],
+                "value": "topojson",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "global"
+                ],
+                "value": "topojson",
+                "resources": [
+                    "ddf--entities--geo--global"
+                ]
+            }
+        ],
         "concepts": [
             {
                 "primaryKey": [
                     "concept"
                 ],
                 "value": "concept_type",
+                "resources": [
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "domain",
                 "resources": [
                     "ddf--concepts"
                 ]
