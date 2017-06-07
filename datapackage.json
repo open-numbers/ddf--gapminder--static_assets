@@ -30,8 +30,8 @@
             }
         },
         {
-            "path": "ddf--datapoints--income_mountain--by--geo--time.csv",
-            "name": "ddf--datapoints--income_mountain--by--geo--time",
+            "path": "ddf--datapoints--income_mountains--by--geo--time.csv",
+            "name": "ddf--datapoints--income_mountains--by--geo--time",
             "schema": {
                 "fields": [
                     {
@@ -41,7 +41,7 @@
                         "name": "time"
                     },
                     {
-                        "name": "income_mountain"
+                        "name": "income_mountains"
                     }
                 ],
                 "primaryKey": [
@@ -76,9 +76,9 @@
                     "geo",
                     "time"
                 ],
-                "value": "income_mountain",
+                "value": "income_mountains",
                 "resources": [
-                    "ddf--datapoints--income_mountain--by--geo--time"
+                    "ddf--datapoints--income_mountains--by--geo--time"
                 ]
             },
             {
@@ -86,9 +86,9 @@
                     "global",
                     "time"
                 ],
-                "value": "income_mountain",
+                "value": "income_mountains",
                 "resources": [
-                    "ddf--datapoints--income_mountain--by--geo--time"
+                    "ddf--datapoints--income_mountains--by--geo--time"
                 ]
             }
         ],

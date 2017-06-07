@@ -1,2 +1,2 @@
 geo,is--global,topojson
-world,TRUE,"world-50m.json"
+world,TRUE,"assets/world-50m.json"
