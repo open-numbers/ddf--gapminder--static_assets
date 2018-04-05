@@ -1,7 +1,8 @@
-concept,concept_type,domain
-geo,entity_domain,
-global,entity_set,geo
-time,time,
-income_mountains,string,
-topojson,string,
-domain,string,
+concept,concept_type,domain,description
+geo,entity_domain,,
+global,entity_set,geo,
+time,time,,
+income_mountains,string,,Precumputed shapes for mountain chart
+topojson,string,,A file name for static topojson world map
+domain,string,,
+description,string,,
