@@ -1,19 +1,20 @@
 {
     "name": "ddf--gapminder--static_assets",
-    "title": "ddf--gapminder--static_assets",
-    "description": "",
-    "version": "0.0.1",
     "language": {
         "id": "en",
         "name": "English"
     },
-    "translations": [],
-    "license": "",
+    "title": "ddf--gapminder--static_assets",
+    "description": "",
     "author": "",
+    "license": "",
+    "translations": [],
+    "version": "0.0.1",
+    "created": "2024-08-08T07:12:52.819693+00:00",
     "resources": [
         {
-            "path": "ddf--concepts.csv",
             "name": "ddf--concepts",
+            "path": "ddf--concepts.csv",
             "schema": {
                 "fields": [
                     {
@@ -24,14 +25,19 @@
                     },
                     {
                         "name": "domain"
+                    },
+                    {
+                        "name": "name"
                     }
                 ],
-                "primaryKey": "concept"
+                "primaryKey": [
+                    "concept"
+                ]
             }
         },
         {
-            "path": "ddf--datapoints--income_mountains--by--geo--time.csv",
             "name": "ddf--datapoints--income_mountains--by--geo--time",
+            "path": "ddf--datapoints--income_mountains--by--geo--time.csv",
             "schema": {
                 "fields": [
                     {
@@ -51,8 +57,8 @@
             }
         },
         {
-            "path": "ddf--entities--geo--global.csv",
             "name": "ddf--entities--geo--global",
+            "path": "ddf--entities--geo--global.csv",
             "schema": {
                 "fields": [
                     {
@@ -65,30 +71,39 @@
                         "name": "topojson"
                     }
                 ],
-                "primaryKey": "geo"
+                "primaryKey": [
+                    "geo"
+                ]
             }
         }
     ],
     "ddfSchema": {
-        "datapoints": [
+        "concepts": [
             {
                 "primaryKey": [
-                    "geo",
-                    "time"
+                    "concept"
                 ],
-                "value": "income_mountains",
+                "value": "concept_type",
                 "resources": [
-                    "ddf--datapoints--income_mountains--by--geo--time"
+                    "ddf--concepts"
                 ]
             },
             {
                 "primaryKey": [
-                    "global",
-                    "time"
+                    "concept"
                 ],
-                "value": "income_mountains",
+                "value": "domain",
                 "resources": [
-                    "ddf--datapoints--income_mountains--by--geo--time"
+                    "ddf--concepts"
+                ]
+            },
+            {
+                "primaryKey": [
+                    "concept"
+                ],
+                "value": "name",
+                "resources": [
+                    "ddf--concepts"
                 ]
             }
         ],
@@ -130,25 +145,28 @@
                 ]
             }
         ],
-        "concepts": [
+        "datapoints": [
             {
                 "primaryKey": [
-                    "concept"
+                    "geo",
+                    "time"
                 ],
-                "value": "concept_type",
+                "value": "income_mountains",
                 "resources": [
-                    "ddf--concepts"
+                    "ddf--datapoints--income_mountains--by--geo--time"
                 ]
             },
             {
                 "primaryKey": [
-                    "concept"
+                    "global",
+                    "time"
                 ],
-                "value": "domain",
+                "value": "income_mountains",
                 "resources": [
-                    "ddf--concepts"
+                    "ddf--datapoints--income_mountains--by--geo--time"
                 ]
             }
-        ]
+        ],
+        "synonyms": []
     }
 }
